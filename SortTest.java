@@ -11,7 +11,7 @@ public class SortTest {
 	public static void main(String[] args) {
 		ArrayList<String> authors = new ArrayList<>();
 
-		File file = new File("\\C:\\Summer Coding\\Summer\\QuizBowlSortTest3.txt");
+		File file = new File();
 		Scanner in = null;
 		try {
 			in = new Scanner(file);
@@ -29,7 +29,7 @@ public class SortTest {
 		}
 		
 //		System.out.println(authors);
-		System.out.println(authors.size());
+//		System.out.println(authors.size());
 
 		Collections.sort(authors, new Comparator<String>() {
 			public int compare(String lineA, String lineB) {
@@ -39,9 +39,9 @@ public class SortTest {
 			}
 		});
 		
-		System.out.println(authors);
+//		System.out.println(authors);
 
-		try (PrintWriter out = new PrintWriter(new File("\\C:\\Summer Coding\\Summer\\QuizBowlSortedTest.txt"));) {
+		try (PrintWriter out = new PrintWriter(new File());) {
 			for (String line : authors) {
 				out.println(line);
 			}
